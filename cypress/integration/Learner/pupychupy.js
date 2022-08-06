@@ -2,7 +2,7 @@
 describe('practice', ( )=> {
     it('practicing cypress', () =>{
 
-        cy.visit('https://automationteststore.com/');
+        cy.visit('https://google.com');
         cy.get('[class="active menu_home"]').click();
 
     })
