@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+const { type } = require("cypress/types/jquery");
+
 describe('practice', ( )=> {
     it('practicing cypress', () =>{
 
@@ -20,14 +23,11 @@ describe('practice', ( )=> {
 
        cy.visit("http://demo.automationtesting.in/");
        cy.get("#btn2").should("be.visible").click();
+       cy.get("input[placeholder='First Name']").type("aleem");
+       cy.get("input[placeholder='Last Name']").type("mian");
        cy.get('textarea[rows="3"').type('virginia').should('be.visible');
-       cy.go(-1);
-       cy.wait(2000);
-       cy.get('#btn1').should('be.visible').click();
-       cy.get("input[placeholder='E mail']").type('zakiraleem@yahoo.com');
-       cy.get("input[placeholder='Password']").type('hero#1');
-       cy.get("#enterbtn").should('be.visible').click();
-
+       cy.get('input[type="email"]').type('usmankarim@gmil.com')
+       
 
 
 
